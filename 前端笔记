@@ -1,0 +1,45 @@
+git不能clone到本地，可以先尝试设置账号密码
+git config --global user.name "your name"
+git config --global user.email "your email"
+git config --global http.sslVerify false
+
+直接clone，一般是下载的master分支，查看分支
+git branch -a
+
+切换分支
+git checkout remotes/origin/TestYour分支
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
