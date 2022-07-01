@@ -8,3 +8,42 @@ git branch -a
 
 切换分支
 git checkout remotes/origin/TestYour分支
+
+
+跨域
+一、同源策略
+浏览器要求，在解析Ajax请求时，要求浏览器的路径与Ajax的请求的路径必须满足三个要求，则满足同源策略，可以访问服务器。
+协议、域名、端口号都相同，只要有一个不相同，那么都是非同源
+
+二、同源策略案例
+案例1:
+1.浏览器地址 http://localhost:8080/some
+2.Ajax请求地址 http://localhost:8080/abc
+满足同源策略.服务器可以正常访问.
+
+案例2:
+1.浏览器地址 http://localhost:8081/some
+2.Ajax请求地址 http://localhost:8080/abc
+不满足同源策略. 端口号不同. 属于跨域请求.
+
+案例3:
+1.浏览器地址 http://localhost:8080/some
+2.Ajax请求地址 https://localhost:8080/abc
+不满足同源策略. 协议不同. 属于跨域请求.
+
+案例4:
+前提: IP与域名映射
+1.浏览器地址 http://www.baidu.com/some
+2.Ajax请求地址 http://110.123.222.111/abc
+不满足同源策略. 域名不同.
+
+案例5:
+1.浏览器地址 http://234.123.43.55:80/some
+2.Ajax请求地址 http://234.123.43.55/abc
+满足同源策略. http协议，默认端口为80
+
+案例6:
+1.浏览器地址 https://234.123.43.55/some
+2.Ajax请求地址 https://234.123.43.55:443/abc
+满足同源策略，https协议默认端口为443
+
