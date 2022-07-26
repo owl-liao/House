@@ -47,3 +47,10 @@ git checkout remotes/origin/TestYour分支
 2.Ajax请求地址 https://234.123.43.55:443/abc
 满足同源策略，https协议默认端口为443
 
+
+禁止和恢复元素拖拽  // https://blog.csdn.net/qq_45152044/article/details/122033827
+const a = document.ondragstart;
+document.ondragstart=function(){return false};
+document.ondragstart = a;
+
+
