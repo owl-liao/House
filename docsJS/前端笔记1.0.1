@@ -1,0 +1,31 @@
+
+鼠标事件 // https://blog.csdn.net/weixin_37150764/article/details/109214855
+Click、mousedown、mousemove、mouseup、contextmenu、mouseover、mouseout、mouseenter、mouseleave
+用button来区分鼠标的按键，0/1/2
+
+DOM3标准规定：click事件只能监听左键，只能通过mousedown和mouseup老判断鼠标键
+鼠标事件：
+拖拽应用：
+应用mousedown mousemove mouseup
+随机移动的方块
+[Mousever]
+
+键盘分类：
+Keydown keyup keypress Keydown>keypress>keyup
+Keydown>keypress>keyup Keydown和keypress的区别
+Keydown可以响应任意键盘按键，keypress只可以响应字符串键盘按键 Keydown返回ASCII码，可以转换相应字符
+
+文本操作事件：
+Input,focus,blur,change 时间分类： 窗体操作（window上的事件） Scroll load
+
+vue中：鼠标滚轮事件 // https://blog.csdn.net/qq_54207312/article/details/124623370
+
+@scroll="shonwinfor"
+
+@wheel="showinfor"
+
+前者针对的是窗口滚动条，当滚动条动作，就会执行相应的回调，它的特点是滚动条要在回调结束后才能动作，所以可以为其加一个passive修饰符，这样就可以达到类似异步执行的效果。
+
+后者针对的是鼠标滚轮，只要鼠标滚轮动作，就会执行相应的回调
+
+
