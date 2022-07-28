@@ -18,6 +18,16 @@ Keydown可以响应任意键盘按键，keypress只可以响应字符串键盘�
 文本操作事件：
 Input,focus,blur,change 时间分类： 窗体操作（window上的事件） Scroll load
 
+let a = ['click','mousedown','mousemove','mouseup','contextmenu','mouseover','mouseout','mouseenter','mouseleave','mousewheel'];
+let c = ['click','mousedown','mousemove','contextmenu','mousewheel'];
+let b = ['click','mousedown','mousemove','mousewheel']; //鼠标移动 点击 滚动
+for (let s = 0; s < a.length; s++) {
+      window.addEventListener(a[s],function (e) {
+        console.log(a[s]+s+"鼠标",e);
+      });
+    }
+
+
 vue中：鼠标滚轮事件 // https://blog.csdn.net/qq_54207312/article/details/124623370
 
 @scroll="shonwinfor"
