@@ -38,6 +38,9 @@ vue中：鼠标滚轮事件 // https://blog.csdn.net/qq_54207312/article/details
 
 后者针对的是鼠标滚轮，只要鼠标滚轮动作，就会执行相应的回调
 
+
+
+文件，通过拖拽上传事件 darg(e){ e.dataTransfer.files[0] } 获取
 上传文件,formData为空，修改header为以下可上传；因默认formData被转为了空对象。打印需要用get方法
 this.$axios({
           method:'POST',
