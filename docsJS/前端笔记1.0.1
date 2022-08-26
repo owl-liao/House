@@ -48,3 +48,15 @@ this.$axios({
           header:{'Content-Type':"multipart/form-data"},
           data:formData
         }).then()
+
+
+报错：
+Cannot assign to read only property 'exports' of object '#<Object>'
+原因 import a from './a.js' 
+与module.exports={... 在webpack打包时，解析冲突。
+可尝试 用export default {  替换 module.exports={...
+或者引入插件  //   https://www.jianshu.com/p/837e6b7d0ce0
+npm install babel-plugin-transform-es2015-modules-commonjs
+然后在 babelrc中配置
+{ "plugins": ["transform-es2015-modules-commonjs"] }
+即可解决
