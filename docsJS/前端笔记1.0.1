@@ -68,3 +68,8 @@ css斜线 // https://blog.51cto.com/u_15309889/3172868?abTest=51cto
 
 vue3组件中引入其他js文件，可放到public文件夹，直接'demo.js'引入，不需要加 ./   //https://blog.csdn.net/weixin_43742708/article/details/110594790
 
+vue强制组件重新渲染  // https://blog.51cto.com/u_15060508/3717478?abTest=51cto
+简单粗暴的方式：重新加载整个页面
+不妥的方式：使用 v-if
+较好的方法：使用Vue的内置forceUpdate方法
+最好的方法：在组件上进行 key 更改
